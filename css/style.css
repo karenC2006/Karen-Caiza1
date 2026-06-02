@@ -1,0 +1,349 @@
+/* --- ESTILOS GENERALES Y RESETEO --- */
+/* Reseteamos los márgenes, paddings y definimos el modelo de caja global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuramos la tipografía base y el comportamiento del scroll */
+html {
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    color: #11052C; /* Texto principal oscuro para alta legibilidad */
+}
+
+/* --- REGLAS DE MAQUETACIÓN REUTILIZABLES --- */
+/* Espaciado generoso para separar visualmente las secciones */
+section {
+    padding: 80px 10% 80px 10%;
+}
+
+/* Estilo estandarizado para los títulos de cada sección */
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #11052C;
+}
+
+
+/* --- HEADER (ENCABEZADO) --- */
+/* Header fijo con distribución horizontal mediante Flexbox */
+.main-header {
+    background-color: #11052C; /* Color principal oscuro */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Marcador de posición cuadrado para el logotipo */
+.logo-placeholder img{
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff; /* Color secundario medio */
+    color: #11052C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-radius: 4px;
+}
+
+/* Navegación horizontal */
+.nav-bar {
+    display: flex;
+    gap: 30px;
+}
+
+/* Enlaces de navegación con efecto de transición suave al pasar el cursor */
+.nav-link {
+    color: #F9F7FC; /* Color claro 1 para contraste */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #F60091; /* Color de acento llamativo en hover */
+}
+
+
+/* --- SECCIÓN HERO --- */
+/* Estructura en dos columnas de igual tamaño usando Flexbox */
+.hero-section {
+    background-color: #F0E9FF; /* Color claro 2 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: 80vh;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    color: #11052C;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: #6f62fe; /* Color secundario */
+    margin-bottom: 30px;
+}
+
+.hero-description {
+    color: #000000;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin-bottom: 35px;
+    font-size: 20px;
+
+}
+/* Botón principal estilizado con el color de acento */
+.btn-primary {
+    display: inline-block;
+    background-color: #F60091; /* Color de acento */
+    color: #F9F7FC;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #11052C; /* Cambia al color oscuro */
+    transform: translateY(-3px); /* Efecto de elevación suave */
+}
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Imagen de perfil perfectamente circular */
+.profile-img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #6f62fe;
+}
+
+
+/* --- SECCIÓN MIS PROYECTOS --- */
+.projects-section {
+    background-color: #F9F7FC; /* Color claro 1 para contrastar con la anterior */
+}
+
+/* Grid de proyectos flexible alineado en fila */
+.projects-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Tarjetas individuales de proyectos con bordes redondeados y sombreado sutil */
+.project-card {
+    background-color: #ded4ff;
+    flex: 1;
+    min-width: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(17, 5, 44, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(17, 5, 44, 0.15);
+}
+
+.project-img {
+    width: 105%;
+    height: 205px;
+    object-fit: cover;
+
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-card-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #11052C;
+}
+
+.project-card-text {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.6;
+}
+
+
+/* --- SECCIÓN HABILIDADES --- */
+.skills-section {
+    background-color: #F0E9FF; /* Color claro 2 */
+}
+
+/* Disposición horizontal de las 4 tarjetas de habilidades */
+.skills-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Tarjetas individuales con fondo blanco para resaltar del fondo lila */
+.skill-card {
+    background-color: #FFFFFF;
+    flex: 1;
+    min-width: 200px;
+    padding: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: #11052C;
+    border-radius: 8px;
+    border-bottom: 4px solid #9288F8; /* Detalle lineal estético */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.skill-card:hover {
+    background-color: #9288F8;
+    color: #FFFFFF;
+}
+
+
+/* --- SECCIÓN CONTACTO --- */
+.contact-section {
+    background-color: #F9F7FC; /* Color claro 1 */
+    display: flex;
+    gap: 50px;
+}
+
+.contact-cta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cta-title {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #11052C;
+}
+
+.cta-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555555;
+}
+
+.contact-form-container {
+    flex: 1;
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(17, 5, 44, 0.05);
+}
+
+/* Estilos de los elementos del formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #11052C;
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #F0E9FF;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Foco estético cuando el usuario escribe en los campos */
+.form-input:focus, .form-textarea:focus {
+    border-color: #F60091;
+}
+
+/* Botón de envío que ocupa todo el ancho de su caja */
+.btn-submit {
+    width: 100%;
+    background-color: #F60091; /* Color de acento */
+    color: #FFFFFF;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #11052C;
+}
+
+
+/* --- FOOTER (PIE DE PÁGINA) --- */
+/* Diseño oscuro centrado con elementos ordenados en bloques verticales */
+.main-footer {
+    background-color: #11052C; /* Color principal oscuro */
+    color: #F9F7FC;
+    padding: 40px 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.copyright-text {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Contenedor de redes sociales alineado en fila horizontal */
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    color: #6f62fe; /* Color secundario medio */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #F60091; /* Resalta en el color de acento */
+    transform: scale(1.1); /* Efecto lupa sutil */
+}
