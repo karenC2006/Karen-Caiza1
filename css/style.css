@@ -172,10 +172,11 @@ section {
 }
 
 .project-img {
-    width: 105%;
-    height: 205px;
-    object-fit: cover;
-
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background-color: #ffffff;
+    padding: 10px;
 }
 
 .project-info {
