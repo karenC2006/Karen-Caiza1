@@ -230,9 +230,10 @@ section {
 
 /* --- SECCIÓN CONTACTO --- */
 .contact-section {
-    background-color: #F9F7FC; /* Color claro 1 */
+    background: linear-gradient(135deg, #F9F7FC, #F0E9FF);
     display: flex;
-    gap: 50px;
+    gap: 60px;
+    align-items: center;
 }
 
 .contact-cta {
@@ -251,65 +252,66 @@ section {
 
 .cta-text {
     font-size: 1.1rem;
-    line-height: 1.7;
+    line-height: 1.8;
     color: #555555;
 }
 
 .contact-form-container {
     flex: 1;
-    background-color: #FFFFFF;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(17, 5, 44, 0.05);
+    background: #FFFFFF;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(17, 5, 44, 0.12);
 }
 
-/* Estilos de los elementos del formulario */
+/* Campos del formulario */
 .form-group {
     margin-bottom: 20px;
 }
 
-.form-label {
+.form-group label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    font-size: 0.9rem;
     color: #11052C;
 }
 
-.form-input, .form-textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
-    padding: 12px 15px;
-    border: 2px solid #F0E9FF;
-    border-radius: 6px;
-    font-family: Arial, sans-serif;
+    padding: 14px 18px;
+    border: 2px solid #E6DFFF;
+    border-radius: 12px;
     font-size: 1rem;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
     outline: none;
-    transition: border-color 0.3s ease;
 }
 
-/* Foco estético cuando el usuario escribe en los campos */
-.form-input:focus, .form-textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
     border-color: #F60091;
+    box-shadow: 0 0 0 4px rgba(246, 0, 145, 0.15);
 }
 
-/* Botón de envío que ocupa todo el ancho de su caja */
-.btn-submit {
+/* Botón */
+.boton-formulario {
     width: 100%;
-    background-color: #F60091; /* Color de acento */
-    color: #FFFFFF;
+    background: linear-gradient(135deg, #F60091, #6f62fe);
+    color: white;
     border: none;
-    padding: 15px;
+    padding: 16px;
+    border-radius: 12px;
     font-size: 1rem;
     font-weight: bold;
-    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.btn-submit:hover {
-    background-color: #11052C;
+.boton-formulario:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(111, 98, 254, 0.3);
 }
-
 
 /* --- FOOTER (PIE DE PÁGINA) --- */
 /* Diseño oscuro centrado con elementos ordenados en bloques verticales */
